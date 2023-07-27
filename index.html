@@ -6,24 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/d6c38f71f6.js" crossorigin="anonymous"></script>
     <title>Fruit Burst</title>
 
-    <style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
 
-        .lato-font{
+    <style>
+        .lato-font {
             font-family: 'Lato', sans-serif;
+        }
+
+        .dotted-line {
+            width: 0;
+            height: 30px;
+            border-left: 2px dotted black;
+            /* Adjust thickness and color as needed */
         }
     </style>
 </head>
 
 <body class="lato-font">
-    <header class="container mx-auto my-8">
-        <!-- Navbar -->
-        <nav class="navbar  px-8 h-24 rounded-full bg-red-400">
+    <header class="container mx-auto lg:my-8 relative">
+        <!-- Mobile Nav -->
+        <div class="lg:hidden flex navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navbar-center">
+                <a class="text-2xl text-gray-800 font-bold flex items-center">
+                    <img src="images/logo.png" alt="" class="h-10 w-10">
+                    <h1 class="pl-3">Fruit Burst</h1>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Lg Navbar -->
+        <nav class="navbar hidden lg:flex px-8 h-24 rounded-full bg-red-400">
             <div class="navbar-start">
                 <ul class="menu menu-horizontal px-1 text-white">
                     <li><a>Home</a></li>
@@ -34,7 +84,8 @@
             </div>
             <div class="navbar-center">
                 <a class="text-3xl text-white font-bold flex items-center">
-                    <img src="images/logo.png" alt="" class="h-10 w-10"> <h1 class="pl-3">Fruit Burst</h1>
+                    <img src="images/logo.png" alt="" class="h-10 w-10">
+                    <h1 class="pl-3">Fruit Burst</h1>
                 </a>
             </div>
             <div class="navbar-end">
@@ -46,8 +97,339 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Slider Area -->
+        <div class="carousel rounded-md lg:my-12 w-full h-52 md:h-96 lg:h-[600px]">
+            <!-- Slider 1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="hero"
+                    style="background-image: url(images/banner1.png); background-size:cover; background-position: center center; background-repeat: no-repeat;">
+                    <div class="hero-overlay opacity-70 bg-gradient-to-b from-[#121212] to-[#00000000]"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-3xl">
+                            <h1 class="mb-5 text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5">Provident cupiditate voluptatem et in.</p>
+                            <button class="btn border-0 text-white hover:text-slate-900 bg-primary-color">Get
+                                Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❮</a>
+                    <a href="#slide2" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❯</a>
+                </div>
+            </div>
+            <!-- Slider 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero"
+                    style="background-image: url(images/banner2.png); background-size:cover; background-position: center center; background-repeat: no-repeat;">
+                    <div class="hero-overlay opacity-60 lg:bg-gradient-to-b from-[#121212] to-[#00000000]"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-3xl">
+                            <h1 class="mb-5 text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5">Provident cupiditate voluptatem et in.</p>
+                            <button class="btn btn-primary">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❮</a>
+                    <a href="#slide3" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❯</a>
+                </div>
+            </div>
+            <!-- Slider 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero"
+                    style="background-image: url(images/banner3.png); background-size:cover; background-position: center center; background-repeat: no-repeat;">
+                    <div class="hero-overlay opacity-60 lg:bg-gradient-to-b from-[#121212] to-[#00000000]"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-3xl">
+                            <h1 class="mb-5 text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5">Provident cupiditate voluptatem et in.</p>
+                            <button class="btn btn-primary">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❮</a>
+                    <a href="#slide1" class="btn btn-circle bg-gray-800 text-white border-0 hover:text-gray-800">❯</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Box -->
+        <div class="hidden lg:flex max-w-5xl pb-10 shadow-xl absolute left-32 -bottom-16 bg-white">
+            <div class="">
+                <figure class="px-10 pt-10">
+                    <img class=" w-40 h-30" src="images/f1.png" alt="" />
+                </figure>
+                <div class="text-gray-800 font-bold text-lg items-center text-center">
+                    <h2 class="">Grapes</h2>
+                </div>
+            </div>
+            <div class="">
+                <figure class="px-10 pt-10">
+                    <img class=" w-40 h-30" src="images/f2.png" alt="" />
+                </figure>
+                <div class="text-gray-800 font-bold text-lg items-center text-center">
+                    <h2 class="">Orange</h2>
+                </div>
+            </div>
+            <div class="">
+                <figure class="px-10 pt-10">
+                    <img class=" w-40 h-30" src="images/f3.png" alt="" />
+                </figure>
+                <div class="text-gray-800 font-bold text-lg items-center text-center">
+                    <h2 class="">Mango</h2>
+                </div>
+            </div>
+            <div class="">
+                <figure class="px-10 pt-10">
+                    <img class=" w-40 h-30" src="images/f4.png" alt="" />
+                </figure>
+                <div class="text-gray-800 font-bold text-lg items-center text-center">
+                    <h2 class="">Strawberry</h2>
+                </div>
+            </div>
+            <div class="">
+                <figure class="px-10 pt-10">
+                    <img class=" w-40 h-30" src="images/f5.png" alt="" />
+                </figure>
+                <div class="text-gray-800 font-bold text-lg items-center text-center">
+                    <h2 class="">Pomegranate</h2>
+                </div>
+            </div>
+        </div>
     </header>
-    
+
+    <main class="container mx-auto">
+
+        <!-- Deal of the day -->
+        <section class=" mt-40 ">
+            <div class="flex mb-8 flex-col lg:flex-row">
+                <div class="flex flex-1">
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-slate-900 text-5xl font-extrabold mb-3">Deal of the day</h1>
+                        <p">Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                            Latin literature from 45 BC, making it over 2000 years old.</p>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right flex gap-5 flex-1 justify-center lg:justify-end">
+                    <div>
+                        <h1 class="text-slate-900 text-5xl font-extrabold">23</h1>
+                        <p>Days</p>
+                    </div>
+                    <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
+                    <div>
+                        <h1 class="text-slate-900 text-5xl font-extrabold">23</h1>
+                        <p>Days</p>
+                    </div>
+                    <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
+                    <div>
+                        <h1 class="text-slate-900 text-5xl font-extrabold">23</h1>
+                        <p>Days</p>
+                    </div>
+                    <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
+                    <div>
+                        <h1 class="text-slate-900 text-5xl font-extrabold">23</h1>
+                        <p>Days</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-around">
+                <!-- Card 1 -->
+                <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
+                    <figure class="px-10 pt-10">
+                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="space-y-5 card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <svg width="200" height="2"> <!-- Adjust width and height as needed -->
+                            <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
+                        </svg>
+                        <h3 class="text-slate-600">Apples</h3>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <button class="btn btn-ghost text-rose-600" onclick="my_modal_1.showModal()">Details</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <!-- I don't know how to add buy action, this two buttons are same, it will close the modal -->
+                                    <button class="btn">Close</button>
+                                    <button class="btn btn-error">Buy Now</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
+                    <figure class="px-10 pt-10">
+                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="space-y-5 card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <svg width="200" height="2"> <!-- Adjust width and height as needed -->
+                            <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
+                        </svg>
+                        <h3 class="text-slate-600">Apples</h3>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <button class="btn btn-ghost text-rose-600" onclick="my_modal_1.showModal()">Details</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <!-- I don't know how to add buy action, this two buttons are same, it will close the modal -->
+                                    <button class="btn">Close</button>
+                                    <button class="btn btn-error">Buy Now</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
+                    <figure class="px-10 pt-10">
+                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="space-y-5 card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <svg width="200" height="2"> <!-- Adjust width and height as needed -->
+                            <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
+                        </svg>
+                        <h3 class="text-slate-600">Apples</h3>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <button class="btn btn-ghost text-rose-600" onclick="my_modal_1.showModal()">Details</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <!-- I don't know how to add buy action, this two buttons are same, it will close the modal -->
+                                    <button class="btn">Close</button>
+                                    <button class="btn btn-error">Buy Now</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
+                    <figure class="px-10 pt-10">
+                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="space-y-5 card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <svg width="200" height="2"> <!-- Adjust width and height as needed -->
+                            <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
+                        </svg>
+                        <h3 class="text-slate-600">Apples</h3>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <button class="btn btn-ghost text-rose-600" onclick="my_modal_1.showModal()">Details</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <!-- I don't know how to add buy action, this two buttons are same, it will close the modal -->
+                                    <button class="btn">Close</button>
+                                    <button class="btn btn-error">Buy Now</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10">
+                <button class="btn border-0 text-white hover:text-slate-900 bg-primary-color justify-center">SHOP
+                    ALL</button>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="hero my-24"
+            style="background-image: url(images/team.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="my-20">
+                    <h1 class="mb-5 text-5xl font-bold">Meet the team!</h1>
+                    <p class="mb-5 max-w-xl">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <div class="flex gap-20 flex-col lg:flex-row">
+                        <div class="space-y-2">
+                            <div class="flex justify-center mb-6">
+                                <img src="images/member1.png" alt="" class="w-28 h-28">
+                            </div>
+                            <h3 class="text-slate-200 text-md font-bold">Awlad Hossain</h3>
+                            <p>Fruits Expert</p>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex justify-center mb-6">
+                                <img src="images/member1.png" alt="" class="w-28 h-28">
+                            </div>
+                            <h3 class="text-slate-200 text-md font-bold">Awlad Hossain</h3>
+                            <p>Fruits Expert</p>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-center mb-6">
+                                <img src="images/member1.png" alt="" class="w-28 h-28">
+                            </div>
+                            <h3 class="text-slate-200 text-md font-bold">Awlad Hossain</h3>
+                            <p>Fruits Expert</p>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-center mb-6">
+                                <img src="images/member1.png" alt="" class="w-28 h-28">
+                            </div>
+                            <h3 class="text-slate-200 text-md font-bold">Awlad Hossain</h3>
+                            <p>Fruits Expert</p>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 </html>
