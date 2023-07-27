@@ -25,7 +25,7 @@
             }
         }
     </script>
-
+    <!-- Custom Styles -->
     <style>
         .lato-font {
             font-family: 'Lato', sans-serif;
@@ -35,7 +35,13 @@
             width: 0;
             height: 30px;
             border-left: 2px dotted black;
-            /* Adjust thickness and color as needed */
+        }
+
+        .fa-brands,
+        .fab {
+            font-weight: 400;
+            font-size: x-large;
+            padding: 5px;
         }
     </style>
 </head>
@@ -70,7 +76,6 @@
                 </a>
             </div>
         </div>
-
 
         <!-- Lg Navbar -->
         <nav class="navbar hidden lg:flex px-8 h-24 rounded-full bg-primary-color">
@@ -128,7 +133,7 @@
                         <div class="max-w-3xl">
                             <h1 class="mb-5 text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">Provident cupiditate voluptatem et in.</p>
-                            <button class="btn btn-primary">Get Started</button>
+                            <button class="btn border-0 text-white hover:text-slate-900 bg-primary-color">Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -146,7 +151,7 @@
                         <div class="max-w-3xl">
                             <h1 class="mb-5 text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">Provident cupiditate voluptatem et in.</p>
-                            <button class="btn btn-primary">Get Started</button>
+                            <button class="btn border-0 text-white hover:text-slate-900 bg-primary-color">Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +162,7 @@
             </div>
         </div>
         <!-- Slider Box -->
-        <div class="hidden lg:flex max-w-5xl pb-10 shadow-xl absolute left-32 -bottom-16 bg-white">
+        <div class="hidden rounded-md lg:flex max-w-5xl pb-10 shadow-xl absolute left-32 -bottom-16 bg-white">
             <div class="">
                 <figure class="px-10 pt-10">
                     <img class=" w-40 h-30" src="images/f1.png" alt="" />
@@ -202,7 +207,6 @@
     </header>
 
     <main class="container mx-auto">
-
         <!-- Deal of the day -->
         <section class="mt-20 lg:mt-40 ">
             <div class="flex mb-8 flex-col lg:flex-row">
@@ -220,20 +224,19 @@
                     </div>
                     <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
                     <div>
-                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">23</h1>
-                        <p>Days</p>
+                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">13</h1>
+                        <p>Hours</p>
                     </div>
                     <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
                     <div>
-                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">23</h1>
-                        <p>Days</p>
+                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">45</h1>
+                        <p>Minutes</p>
                     </div>
                     <i class="mt-6 fa-solid fa-ellipsis-vertical"></i>
                     <div>
-                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">23</h1>
-                        <p>Days</p>
+                        <h1 class="text-slate-900 text-4xl lg:text-5xl font-extrabold">57</h1>
+                        <p>Seconds</p>
                     </div>
-
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-around">
@@ -273,14 +276,14 @@
                 <!-- Card 2 -->
                 <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
                     <figure class="px-10 pt-10">
-                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                        <img src="images/fruit7.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="space-y-5 card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
                         <svg width="200" height="2"> <!-- Adjust width and height as needed -->
                             <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                         </svg>
-                        <h3 class="text-slate-600">Apples</h3>
+                        <h3 class="text-slate-600">Oranges</h3>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -305,14 +308,14 @@
                 <!-- Card 3 -->
                 <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
                     <figure class="px-10 pt-10">
-                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                        <img src="images/fruit8.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="space-y-5 card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
                         <svg width="200" height="2"> <!-- Adjust width and height as needed -->
                             <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                         </svg>
-                        <h3 class="text-slate-600">Apples</h3>
+                        <h3 class="text-slate-600">Red Dragons</h3>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -337,14 +340,14 @@
                 <!-- Card 4 -->
                 <div class="space-y-5 p-5 card bg-base-100 border border-[#12121219]">
                     <figure class="px-10 pt-10">
-                        <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                        <img src="images/fruit9.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="space-y-5 card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
                         <svg width="200" height="2"> <!-- Adjust width and height as needed -->
                             <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                         </svg>
-                        <h3 class="text-slate-600">Apples</h3>
+                        <h3 class="text-slate-600">Banana</h3>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -379,16 +382,18 @@
             <div class="hero-content text-center text-neutral-content">
                 <div class="my-20">
                     <h1 class="mb-5 text-5xl font-bold">Meet the team!</h1>
-                    <p class="mb-5 max-w-xl">Contrary to popular belief, is not simply random text. It has roots in a
+                    <div class="flex justify-center">
+                        <p class="mb-5 max-w-xl">Contrary to popular belief, is not simply random text. It has roots in a
                         piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                    <div class="flex gap-20 flex-col lg:flex-row">
+                    </div>
+                    <div class="flex gap-28 flex-col lg:flex-row">
                         <div class="space-y-2">
                             <div class="flex justify-center mb-6">
                                 <img src="images/member1.png" alt="" class="w-28 h-28">
                             </div>
                             <h3 class="text-slate-200 text-md font-bold">Awlad Hossain</h3>
                             <p>Fruits Expert</p>
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-facebook text-primary-color fill-white"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-linkedin"></i>
                         </div>
@@ -438,7 +443,6 @@
                         classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 </div>
             </div>
-
             <div class="flex gap-6 flex-col lg:flex-row">
                 <div class="">
                     <div class="flex flex-col text-center lg:text-left lg:flex-row pb-5">
@@ -484,7 +488,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <div class="order-first lg:order-none flex">
                     <img src="images/whychoose1.png" alt="">
@@ -499,7 +503,8 @@
                                         <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                                     </svg>
                                 </div>
-                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                </p>
                             </div>
                             <div class="mt-5 -ml-11 lg:ml-0 pl-5">
                                 <i class="bg-gray-400 rounded-full p-5 fa-solid fa-users"></i>
@@ -513,7 +518,8 @@
                                         <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                                     </svg>
                                 </div>
-                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                </p>
                             </div>
                             <div class="mt-5 -ml-11 lg:ml-0 pl-5">
                                 <i class="bg-gray-400 rounded-full p-5 fa-solid fa-users"></i>
@@ -527,20 +533,51 @@
                                         <line x1="0" y1="0" x2="300" y2="0" style="stroke: gray; stroke-width: 1;" />
                                     </svg>
                                 </div>
-                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                </p>
                             </div>
                             <div class="mt-5 -ml-11 lg:ml-0 pl-5">
                                 <i class="bg-gray-400 rounded-full p-5 fa-solid fa-users"></i>
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
+
+    <footer class="footer footer-center p-10 bg-[#121212] text-white rounded mt-20">
+
+        <div>
+            <a class="text-3xl text-white font-bold flex items-center">
+                <img src="images/logo.png" alt="" class="h-10 w-10">
+                <h1 class="pl-3">Fruit Burst</h1>
+            </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Shop</a>
+            <a class="link link-hover">All Fruits</a>
+            <a class="link link-hover">Support</a>
+            <a class="link link-hover">My Account</a>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a><i class="fa-brands fa-twitter"></i></a>
+                <a><i class="fa-brands fa-facebook"></i></a>
+                <a><i class="fa-brands fa-youtube"></i></a>
+                <a><i class="fa-brands fa-linkedin"></i></a>
+                <a><i class="fa-brands fa-instagram"></i></a>
+                <a><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2023 - All right reserved by Fruit Burst</p>
+        </div>
+    </footer>
 
 </body>
 
